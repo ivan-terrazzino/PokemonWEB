@@ -9,7 +9,7 @@ import datetime
 # Función para generar un token de sesión JWT
 def generar_token(username):
     secret_key = os.getenv('SECRET_KEY')
-    expiration_time = datetime.datetime.utcnow() + datetime.timedelta(minutes=10)  # El token expira en 1 hora
+    expiration_time = datetime.datetime.utcnow() + datetime.timedelta(minutes=10)  # El token expira en 10 minutos
     payload = {
         'username': username,
         'exp': expiration_time
